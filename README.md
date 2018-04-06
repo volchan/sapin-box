@@ -1,1 +1,1 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+SoundBox for MonsieurSapin. [https://www.twitch.tv/monsieursapin](https://www.twitch.tv/monsieursapin)

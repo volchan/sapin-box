@@ -12,6 +12,8 @@ gem 'redis'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 4.7'
+gem 'pry-rails'
+gem 'react_on_rails'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
@@ -22,9 +24,8 @@ group :development do
 end
 
 group :development, :test do
-  gem 'pry-byebug'
-  gem 'pry-rails'
   gem 'listen', '~> 3.0.5'
+  gem 'pry-byebug'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
