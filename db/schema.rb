@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20180406171037) do
     t.string "avatar"
     t.string "provider"
     t.string "token"
+    t.datetime "token_expiry"
     t.string "username"
     t.integer "uid"
     t.integer "role", default: 0
