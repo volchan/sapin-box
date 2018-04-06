@@ -1,0 +1,12 @@
+.landing {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  .logo {
+    font-size: 10rem;
+  }
+}

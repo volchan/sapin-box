@@ -1,1 +1,23 @@
-= link_to "Sign in with twitch", user_twitch_omniauth_authorize_path, class: 'btn btn-primary'
+.landing
+  %h1.logo Sapin Boîte
+  = link_to "Sign in with twitch", user_twitch_omniauth_authorize_path, class: 'btn btn-primary'
+
+= content_for :after_js do
+  :javascript
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    var pattern = Trianglify({
+      cell_size: 75,
+      variance: 0.75,
+      x_colors: 'PuOr',
+      y_colors: 'match_x',
+      palette: Trianglify.colorbrewer,
+      color_space: 'lab',
+      color_function: false,
+      stroke_width: 1.51,
+      width: w,
+      height: h,
+      seed: null
+    });
+
+    document.querySelector(".landing").style.backgroundImage=("url(" + pattern.png() + ")");

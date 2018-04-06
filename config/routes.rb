@@ -4,4 +4,8 @@ Rails.application.routes.draw do
 }
 
   root to: 'pages#home'
+
+  namespace :soundboard do
+    resources :sounds, only: %I[index], path: "/"
+  end
 end
