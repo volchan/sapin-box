@@ -1,0 +1,14 @@
+.container.main-padding
+  = simple_form_for @sound do |f|
+    .row
+      .col-sm-6.offset-sm-3
+        = f.input :title
+    .row
+      .col-sm-6.offset-sm-3
+        = f.input :category, collection: Sound.categories.keys, label_method: :humanize
+    .row
+      .col-sm-6.offset-sm-3
+        = f.input :title
+    .row
+      .col-sm-6.offset-sm-3
+        = f.submit class: "btn btn-block btn-primary"

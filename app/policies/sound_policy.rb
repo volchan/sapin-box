@@ -1,4 +1,8 @@
 class SoundPolicy < ApplicationPolicy
+  def new?
+    true
+  end
+  
   class Scope < Scope
     def resolve
       scope

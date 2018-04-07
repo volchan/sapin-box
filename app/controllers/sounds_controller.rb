@@ -1,5 +1,7 @@
 class SoundsController < ApplicationController
-  def new; end
+  def new
+    authorize @sound = Sound.new
+  end
 
   def create; end
 
