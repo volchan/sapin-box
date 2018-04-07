@@ -1,6 +1,9 @@
 .landing
   %h1.logo Sapin Boîte
-  = link_to "Sign in with twitch", user_twitch_omniauth_authorize_path, class: 'btn btn-primary'
+  = link_to user_twitch_omniauth_authorize_path, class: 'btn btn-primary' do
+    %i.fab.fa-twitch
+    &nbsp;
+    Se connecter avec Twitch
 
 = content_for :after_js do
   :javascript
