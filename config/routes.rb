@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   namespace :soundboard do
     resources :sounds, only: %I[index], path: "/"
   end
+
+  resources :sounds, only: %i[new create edit update destroy]
 end

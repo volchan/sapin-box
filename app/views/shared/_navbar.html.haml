@@ -1,3 +1,12 @@
-%nav.navbar.navbar-light.bg-light.justify-content-between
-  %span.navbar-brand.mb-0.h1.logo= link_to "Sapin Boîte", root_path
-  %span= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "btn btn-danger"
+%nav.navbar.navbar-expand-lg.navbar-light.bg-light.justify-content-between
+  %a.navbar-brand.logo{ href: root_path } Sapin Boîte
+  %span
+    = link_to new_sound_path, class: "btn btn-primary" do
+      %i.fas.fa-plus-circle
+      &nbsp;
+      Ajouter un son
+    &nbsp;
+    = link_to destroy_user_session_path, method: :delete, class: "btn btn-danger" do
+      %i.fas.fa-sign-out-alt
+      &nbsp;
+      Se déconnecter
