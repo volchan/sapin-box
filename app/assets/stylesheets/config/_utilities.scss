@@ -6,3 +6,17 @@
 .main-padding {
   padding: 20px;
 }
+
+.has-invalid {
+  .invalid-feedback {
+    display: block;
+  }
+
+  label {
+    color: $red;
+  }
+
+  .form-control {
+    border-color: $red;
+  }
+}

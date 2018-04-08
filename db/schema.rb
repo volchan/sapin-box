@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180406171037) do
+ActiveRecord::Schema.define(version: 20180408094638) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,10 @@ ActiveRecord::Schema.define(version: 20180406171037) do
     t.integer "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "file_file_name"
+    t.string "file_content_type"
+    t.integer "file_file_size"
+    t.datetime "file_updated_at"
     t.index ["user_id"], name: "index_sounds_on_user_id"
   end
 

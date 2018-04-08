@@ -3,6 +3,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable,
          :validatable, :omniauthable, omniauth_providers: [:twitch]
 
+  has_many :sounds, dependent: :destroy
+
   scope :find_for_twitch_oauth, lambda { |auth|
     user_params = auth.slice(:provider, :uid)
     user_params[:email] = auth.info.email
