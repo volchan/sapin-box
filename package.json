@@ -6,6 +6,7 @@
     "babel-preset-react": "^6.24.1",
     "bootstrap": "3",
     "canvas": "^1.6.10",
+    "howler": "^2.0.9",
     "jquery": "^3.3.1",
     "prop-types": "^15.6.1",
     "react": "^16.3.1",

@@ -1,0 +1,15 @@
+.sound-card
+  .sound-title
+    = sound.title
+  .play-btn
+    %i.fas.fa-play-circle{ data: { url: sound.url }, onclick: "playSound(this)" }
+  .sound-uploader
+    = image_tag sound.user.avatar
+    = sound.user.username
+  - if sound.user == current_user
+    .controls
+      = link_to edit_sound_path(sound) do
+        %i.fas.fa-edit
+
+      = link_to sound_path(sound), method: :delete, class: "text-danger", data: { confirm: "Vous êtes sûr ?" } do
+        %i.fas.fa-trash-alt
