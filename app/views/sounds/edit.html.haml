@@ -1,0 +1,20 @@
+.container.main-padding
+  = simple_form_for @sound do |f|
+    .row
+      .col-sm-6.offset-sm-3
+        = f.input :title
+    .row
+      .col-sm-6.offset-sm-3
+        = f.input :category, collection: Sound.categories.keys, label_method: :humanize
+    .row
+      .col-sm-6.offset-sm-3
+        = f.input :file, as: :file, hint: "Laisser vide si aucun changement", wrapper_html: { class: "custom-file mb-5"}, input_html: { class: "custom-file-input" }, label_html: { class: "custom-file-label" }
+    .row
+      .col-sm-6.offset-sm-3
+        = f.submit class: "btn btn-block btn-primary"
+
+= content_for :after_js do
+  :javascript
+    $('.custom-file-input').on('change',function(){
+      $('.custom-file-label').html($(this).val());
+    });

@@ -5,6 +5,8 @@ class User < ApplicationRecord
 
   has_many :sounds, dependent: :destroy
 
+  enum role: { user: 0, moderator: 1, admin: 2 }
+
   scope :find_for_twitch_oauth, lambda { |auth|
     user_params = auth.slice(:provider, :uid)
     user_params[:email] = auth.info.email

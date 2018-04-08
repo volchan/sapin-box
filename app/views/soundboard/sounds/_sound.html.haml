@@ -6,7 +6,7 @@
   .sound-uploader
     = image_tag sound.user.avatar
     = sound.user.username
-  - if sound.user == current_user
+  - if sound.user == current_user || current_user.admin? || current_user.moderator?
     .controls
       = link_to edit_sound_path(sound) do
         %i.fas.fa-edit
